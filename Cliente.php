@@ -1,30 +1,29 @@
 <?php
 
-class Cliente {
+class Usuario {
    
-    private $nome;
-    private $email;
+    public $usuario;
+    public $email;
     private $cpf;
-    public $id;
+    private $senha;
 
-    public function __construct($nome, $email, $cpf, $id) {
-        $this->nome = $nome;
+    public function __construct($usuario, $email, $cpf, $senha, $id) {
+        $this->usuario = $usuario;
         $this->email = $email;
         $this->cpf = $cpf;
-        $this->id = $id;
+        $this->senha = $senha;
     }
 
     // exibir as informações do cliente
-    public function exibirCliente() {
-        echo "Nome: " . $this->nome . "<br>";
+    public function exibirUsuario() {
+        echo "usuario: " . $this->usuario . "<br>";
         echo "Email: " . $this->email . "<br>";
         echo "CPF: " . $this->cpf . "<br>";
-        echo "ID: " . $this->id . "<br>";
     }
 }
 
 //novo cliente
-$cliente1 = new Cliente("Pedro", "pedro@email.com", "101.101.232-23", "0001");
+$cliente1 = new Cliente("Operador de Máquina", "pedro@email.com", "101.101.232-23",);
 
 //informações do cliente
 $cliente1->exibirCliente();
